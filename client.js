@@ -18,8 +18,6 @@ function generateDiv() {
 
   $("#container").append('<div></div>');
   var $el = $("#container").children().last();
-  $el.data('color', $el.css("background-color"));
-
 
   $el.append('<p>' + clickCount + '</p>');
   $el.append('<button class="swapColors">Swap</button>');
@@ -31,7 +29,6 @@ function generateDiv() {
 function swapColors() {
   // make it yellow
   $(this).parent().toggleClass('yellow');
-  
 }
 
 // remove selected div from the Dom
