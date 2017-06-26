@@ -1,8 +1,9 @@
+// store the number of clicks on the generate button
 var clickCount = 0;
 
 $(document).ready(function() {
   console.log('ready to roll');
-  // append starting button here
+  // append starting button here if not already in html file
 
   // event listeners
   $("#generateDiv").on('click', generateDiv);
