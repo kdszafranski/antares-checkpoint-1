@@ -23,13 +23,25 @@ function generateDiv() {
   $el.append('<p>' + clickCount + '</p>');
   $el.append('<button class="swapColors">Swap</button>');
   $el.append('<button class="removeDiv">Delete</button>');
-
 }
 
 // changes selected div to yellow
 function swapColors() {
-  // make it yellow
-  $(this).parent().toggleClass('yellow');
+  // store reference to the parent to save some typing
+  $div = $(this).parent();
+  // get the color value
+  $divBGColor = $div.css('background-color');
+
+  if($divBGColor == 'rgb(255, 0, 0)') {
+    // is red, make it yellow
+    console.log('red');
+    $div.css('background-color', 'yellow');
+  } else {
+    // is yellow, make it red
+    console.log('yellow');
+    $div.css('background-color', 'red');
+  }
+
 }
 
 // remove selected div from the Dom
